@@ -1,0 +1,37 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">?????????????? ????????????: {{currentUser.fullName}}</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class=" col-md-9 col-lg-9 ">
+          <table class="table table-user-information">
+            <tbody>
+               <tr>
+                <td>?????? ???</td>
+                <td><input ng-model="currentUser.fullName"></input></td>
+              </tr>
+              <tr>
+                <td>???? ????????</td>
+                <td><input ng-model="currentUser.birthdate"></input></td>
+              </tr>
+              <tr>
+                <td>???</td>
+                <td><input ng-model="currentUser.gender"></input></td>
+              </tr>
+              <tr>
+                <td>?????</td>
+                <td><input ng-model="currentUser.address"></input></td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>
+                  <input ng-model="currentUser.email"></input>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>

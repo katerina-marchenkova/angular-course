@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>???????? ?????????????</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container" ng-app="userApp">
+      <users>
+      </users>
+    </div>
+    <script data-require="angularjs@1.5.7" data-semver="1.5.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script>
+       angular.module("userApp", []);
+       angular.module("userApp")
+         .directive("users", function() {
+           return {
+             scope: true,
+             restrict: "E",
+             templateUrl: "users.html",
+             link: function(scope) {
+               scope.users = [
+  {
+    "id": 1,
+    "fullName": "?????? ????",
+    "avatarUrl": "https://randomuser.me/api/portraits/thumb/men/57.jpg",
+    "birthdate": "1976-10-10",
+    "gender": "???????",
+    "address": "??. ?????????????, 47?",
+    "email": "ivanov@mail.ru"
+  },
+  {
+    "id": 2,
+    "fullName": "?????? ????",
+    "avatarUrl": "https://randomuser.me/api/portraits/thumb/men/7.jpg",
+    "birthdate": "1957-01-14",
+    "gender": "???????",
+    "address": "??.?????????, 13",
+    "email": "ivanov@mail.ru"
+  },
+  {
+    "id": 3,
+    "fullName": "????????? ???????",
+    "avatarUrl": "https://randomuser.me/api/portraits/thumb/women/7.jpg",
+    "birthdate": "1990-07-03",
+    "gender": "???????",
+    "address": "??. ??????????, 59",
+    "email": "ivanov@mail.ru"
+  }
+];
+               scope.currentUser = scope.users[0];
+             }
+           }
+         })
+         .directive("usercard", function(){
+           return {
+             scope: false,
+             restrict:"E",
+             templateUrl: "userCard.html",
+             link: function(scope){
+             }
+             }
+           })
+        .directive("userEdit", function(){
+           return {
+             scope: true,
+             restrict:"E",
+             templateUrl: "userEdit.html",
+             link: function(scope){
+             }
+             }
+        })
+        .directive("avatar", function(){
+          
+        });  
+    </script>
+  </body>
+
+</html>
